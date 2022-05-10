@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - run: git submodule sync && git submodule update --init
-      - run: apt update && apt install python python-dev py-pip build-base
+      - run: sudo apt update && sudo apt install python python-dev py-pip build-base
       - run: pip install awscli
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       # - run: |
